@@ -74,6 +74,8 @@ llm_with_tools = llm.bind_tools([get_weather, get_news])
 
 # it acts as memory for llm to know that next step to take
 
+# Human Message -> AIMessage(telling which tool needed)-> toolMessage consisting result-> AImessage
+
 messages = [
     HumanMessage(
         content="What is weather in Mumbai and tell latest news about Mumbai"
